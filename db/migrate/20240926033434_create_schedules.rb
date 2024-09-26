@@ -10,7 +10,7 @@ class CreateSchedules < ActiveRecord::Migration[7.0]
       t.integer :start_time_id, null: false
       t.integer :meeting_time_id, null: false
       t.date :deadline, null: false
-      # t.references :user, null: false, foreign_key: true
+      t.references :user, null: false, foreign_key: true
 
       t.timestamps
     end
