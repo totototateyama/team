@@ -1,24 +1,47 @@
-# README
+# テーブル設計
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## users テーブル
 
-Things you may want to cover:
+| Column              | Type       | Options                        |
+| ------------------- | ---------- | ------------------------------ |
+| email               | string     | null: false, unique: true      |
+| encrypted_password  | string     | null: false                    |
+| name_kanji          | string     | null: false                    |
+| name_katakana       | string     | null: false                    |
 
-* Ruby version
+### Association
 
-* System dependencies
+- has_many :schedules
+- has_many :comments
 
-* Configuration
+## schedules テーブル
 
-* Database creation
+| Column              | Type       | Options                        |
+| ------------------- | ---------- | ------------------------------ |
+| status_id           | integer    | null: false                    |
+| match_day           | date       | null: false                    |
+| match_week_id       | integer    | null: false                    |
+| opponent            | string     | null: false                    |
+| location            | string     | null: false                    |
+| start_time_id       | integer    | null: false                    |
+| meeting_time_id     | integer    | null: false                    |
+| deadline            | date       | null: false                    |
+| user                | references | null: false, foreign_key: true |
 
-* Database initialization
+### Association
 
-* How to run the test suite
+- belongs_to :user
+- has_many :comments
 
-* Services (job queues, cache servers, search engines, etc.)
+## comments テーブル
 
-* Deployment instructions
+| Column              | Type       | Options                        |
+| ------------------- | ---------- | ------------------------------ |
+| content             | text       | null: false                    |
+| schedule            | references | null: false, foreign_key: true |
+| user                | references | null: false, foreign_key: true |
 
-* ...
+### Association
+
+- belongs_to :user
+- belongs_to :schedule
