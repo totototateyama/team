@@ -10,7 +10,17 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2024_09_26_054044) do
+ActiveRecord::Schema[7.0].define(version: 2024_09_26_083217) do
+  create_table "comments", charset: "utf8mb3", force: :cascade do |t|
+    t.text "content", null: false
+    t.bigint "user_id", null: false
+    t.bigint "schedule_id", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["schedule_id"], name: "index_comments_on_schedule_id"
+    t.index ["user_id"], name: "index_comments_on_user_id"
+  end
+
   create_table "schedules", charset: "utf8mb3", force: :cascade do |t|
     t.integer "status_id", null: false
     t.date "match_day", null: false
@@ -40,5 +50,7 @@ ActiveRecord::Schema[7.0].define(version: 2024_09_26_054044) do
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
+  add_foreign_key "comments", "schedules"
+  add_foreign_key "comments", "users"
   add_foreign_key "schedules", "users"
 end
