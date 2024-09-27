@@ -23,8 +23,8 @@
 | match_week_id       | integer    | null: false                    |
 | opponent            | string     | null: false                    |
 | location            | string     | null: false                    |
-| start_time_id       | integer    | null: false                    |
-| meeting_time_id     | integer    | null: false                    |
+| start_time          | integer    | null: false                    |
+| meeting_time        | integer    | null: false                    |
 | deadline            | date       | null: false                    |
 | user                | references | null: false, foreign_key: true |
 
