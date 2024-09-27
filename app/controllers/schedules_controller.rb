@@ -12,7 +12,7 @@ class SchedulesController < ApplicationController
   end
 
   def create
-    @schedule = Schedule.new(prototype_params)
+    @schedule = Schedule.new(schedule_params)
     if @schedule.save
       redirect_to root_path
     else

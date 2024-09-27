@@ -1,5 +1,4 @@
 class CommentsController < ApplicationController
-
   def create
     @comment = Comment.new(comment_params)
     if @comment.save
@@ -16,5 +15,4 @@ class CommentsController < ApplicationController
   def comment_params
     params.require(:comment).permit(:content).merge(user_id: current_user.id, schedule_id: params[:schedule_id])
   end
-
 end

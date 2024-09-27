@@ -1,36 +1,36 @@
 <main class="main">
   <div class="inner">
-    <div class="prototype__wrapper">
-      <p class="prototype__hedding">
-        <%= @prototype.title %>
+    <div class="schedule__wrapper">
+      <p class="schedule__hedding">
+        <%= @schedule.title %>
       </p>
-      <%= link_to "by #{@prototype.user.name}", user_path(@prototype.user), class: :prototype__user %>
-      <% if current_user == @prototype.user%>
-        <div class="prototype__manage">
-          <%= link_to "編集する", edit_prototype_path(@prototype), class: :prototype__btn %>
-          <%= link_to "削除する", prototype_path(@prototype), data: { turbo_method: :delete }, class: :prototype__btn %>
+      <%= link_to "by #{@schedule.user.name}", user_path(@schedule.user), class: :schedule__user %>
+      <% if current_user == @schedule.user%>
+        <div class="schedule__manage">
+          <%= link_to "編集する", edit_schedule_path(@schedule), class: :schedule__btn %>
+          <%= link_to "削除する", schedule_path(@schedule), data: { turbo_method: :delete }, class: :schedule__btn %>
         </div>
       <% end %>
-      <div class="prototype__image">
-        <%= image_tag @prototype.image %>
+      <div class="schedule__image">
+        <%= image_tag @schedule.image %>
       </div>
-      <div class="prototype__body">
-        <div class="prototype__detail">
+      <div class="schedule__body">
+        <div class="schedule__detail">
           <p class="detail__title">キャッチコピー</p>
           <p class="detail__message">
-            <%= @prototype.catch_copy %>
+            <%= @schedule.catch_copy %>
           </p>
         </div>
-        <div class="prototype__detail">
+        <div class="schedule__detail">
           <p class="detail__title">コンセプト</p>
           <p class="detail__message">
-            <%= @prototype.concept %>
+            <%= @schedule.concept %>
           </p>
         </div>
       </div>
-      <div class="prototype__comments">
+      <div class="schedule__comments">
         <% if user_signed_in? %>
-          <%= form_with model: [@prototype, @comment], local: true do |f|%>
+          <%= form_with model: [@schedule, @comment], local: true do |f|%>
             <div class="field">
               <%= f.label :content, "コメント" %><br />
               <%= f.text_field :content, id:"comment_content" %>
