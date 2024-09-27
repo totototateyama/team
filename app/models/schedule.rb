@@ -8,8 +8,8 @@ class Schedule < ApplicationRecord
   validates :match_week_id,   presence: true  
   validates :opponent,        presence: true
   validates :location,        presence: true
-  validates :start_time_id,   presence: true
-  validates :meeting_time_id, presence: true
+  validates :start_time,      presence: true
+  validates :meeting_time   , presence: true
   validates :deadline,        presence: true
 
 end

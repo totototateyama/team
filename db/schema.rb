@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2024_09_26_083217) do
+ActiveRecord::Schema[7.0].define(version: 2024_09_26_313217) do
   create_table "comments", charset: "utf8mb3", force: :cascade do |t|
     t.text "content", null: false
     t.bigint "user_id", null: false
@@ -27,8 +27,8 @@ ActiveRecord::Schema[7.0].define(version: 2024_09_26_083217) do
     t.integer "match_week_id", null: false
     t.string "opponent", null: false
     t.string "location", null: false
-    t.integer "start_time_id", null: false
-    t.integer "meeting_time_id", null: false
+    t.integer "start_time", null: false
+    t.integer "meeting_time", null: false
     t.date "deadline", null: false
     t.bigint "user_id", null: false
     t.datetime "created_at", null: false

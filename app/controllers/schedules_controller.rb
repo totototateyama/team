@@ -47,7 +47,7 @@ class SchedulesController < ApplicationController
   private
 
   def schedule_params
-    params.require(:schedule).permit(:status_id, :match_day, :match_week_id, :opponent, :location, :start_time_id, :meeting_time_id, :deadline).merge(user_id: current_user.id)
+    params.require(:schedule).permit(:status_id, :match_day, :match_week_id, :opponent, :location, :start_time, :meeting_time, :deadline).merge(user_id: current_user.id)
   end
 
   def set_schedule
