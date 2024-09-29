@@ -2,9 +2,9 @@
   <div class="inner">
     <div class="schedule__wrapper">
       <p class="schedule__hedding">
-        <%= @schedule.title %>
+        <%= @schedule.status.name %>
       </p>
-      <%= link_to "by #{@schedule.user.name}", user_path(@schedule.user), class: :schedule__user %>
+      <%= link_to "by #{@schedule.user.name_kanji}", user_path(@schedule.user), class: :schedule__user %>
       <% if current_user == @schedule.user%>
         <div class="schedule__manage">
           <%= link_to "編集する", edit_schedule_path(@schedule), class: :schedule__btn %>
@@ -12,19 +12,19 @@
         </div>
       <% end %>
       <div class="schedule__image">
-        <%= image_tag @schedule.image %>
+        <%#= image_tag @schedule.image %>
       </div>
       <div class="schedule__body">
         <div class="schedule__detail">
           <p class="detail__title">キャッチコピー</p>
           <p class="detail__message">
-            <%= @schedule.catch_copy %>
+            <%= @schedule.start_time %>
           </p>
         </div>
         <div class="schedule__detail">
           <p class="detail__title">コンセプト</p>
           <p class="detail__message">
-            <%= @schedule.concept %>
+            <%= @schedule.meeting_time %>
           </p>
         </div>
       </div>
@@ -44,7 +44,7 @@
           <% @comments.each do |comment| %>
             <li class="comments_list">
               <%= comment.content%>
-              <%= link_to "（#{comment.user.name}）", user_path(comment.user), class: :comment_user %>
+              <%= link_to "（#{comment.user.name_kanji}）", user_path(comment.user), class: :comment_user %>
             </li>
           <% end %>
         </ul>
