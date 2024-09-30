@@ -1,10 +1,26 @@
 <div class="card">
-  <%= link_to schedule.status.name, schedule_path(schedule) %>
-  <div class="card__body">
-    <%= link_to schedule.match_day, schedule_path(schedule), class: :card__title%>
-    <p class="card__summary">
-      <%= schedule.opponent %>
-    </p>
-    <%= link_to "by #{schedule.user.name_kanji}", user_path(schedule.user), class: :card__user %>
-  </div>
+    <div class="card__status">
+      <%= link_to "【#{schedule.status.name}】", schedule_path(schedule) %>
+    </div>
+    
+    <div class="card__match">
+      <p class="card__match_day">
+        <%= link_to "対戦日　： #{schedule.match_day}", schedule_path(schedule) %>
+      </p>
+      <p class="card__match_week">
+        <%= link_to "#{schedule.match_week.name}", schedule_path(schedule) %>
+      </p>
+    </div>
+
+    <div class="card__opponent">
+      <%= link_to "対戦相手： #{schedule.opponent}", schedule_path(schedule) %>
+    </div>
+
+    <div class="card__start_time">
+      <%= link_to "試合開始： #{l schedule.start_time, format: :short}", schedule_path(schedule) %>
+    </div>
+
+    <div class="card__user_name_kanji">
+      <%= link_to "最終更新者： #{schedule.user.name_kanji}", schedule_path(schedule) %>
+    </div>
 </div>

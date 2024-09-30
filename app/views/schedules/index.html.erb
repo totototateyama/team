@@ -1,11 +1,5 @@
 <main class="main">
   <div class="inner">
-    <% if user_signed_in? %>
-      <div class="greeting">
-        ようこそ！
-        <%= link_to "#{current_user.name_kanji}さん！", user_path(current_user), class: :greeting__link%>
-      </div>
-    <% end %>
     <div class="card__wrapper">
       <%= render partial: 'schedule', collection: @schedules %>
     </div>

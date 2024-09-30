@@ -31,6 +31,12 @@
           <% end %>
         </div>
       </div>
+        <div class="greeting">
+          <% if user_signed_in? %>
+            ♦ ようこそ～
+            <%= link_to "#{current_user.name_kanji}さん ♪ ♦", user_path(current_user), class: :greeting__link%>
+          <% end %>
+        </div>
     </header>
     <%= yield %>
     <footer class="footer">
