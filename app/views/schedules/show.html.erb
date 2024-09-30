@@ -1,35 +1,49 @@
 <main class="main">
   <div class="inner">
     <div class="schedule__wrapper">
-      <p class="schedule__hedding">
-        <%= @schedule.status.name %>
+      <p class="schedule__status">
+        <%= "【#{@schedule.status.name}】" %>
       </p>
-      <%= link_to "by #{@schedule.user.name_kanji}", user_path(@schedule.user), class: :schedule__user %>
-      <% if current_user == @schedule.user%>
-        <div class="schedule__manage">
-          <%= link_to "編集する", edit_schedule_path(@schedule), class: :schedule__btn %>
-          <%= link_to "削除する", schedule_path(@schedule), data: { turbo_method: :delete }, class: :schedule__btn %>
-        </div>
-      <% end %>
-      <div class="schedule__image">
-        <%#= image_tag @schedule.image %>
-      </div>
-      <div class="schedule__body">
-        <div class="schedule__detail">
-          <p class="detail__title">キャッチコピー</p>
-          <p class="detail__message">
-            <%= l @schedule.start_time, format: :short %>
-          </p>
-        </div>
-        <div class="schedule__detail">
-          <p class="detail__title">コンセプト</p>
-          <p class="detail__message">
-            <%= l @schedule.meeting_time, format: :short %>
-          </p>
-        </div>
-      </div>
+    </div>
+
+    <div class="schedule__match">
+      <p class="schedule__match_day">
+        <%= "対戦日　： #{@schedule.match_day}" %>
+      </p>
+      <p class="schedule__match_week">
+        <%= "#{@schedule.match_week.name}" %>
+      </p>
+    </div>
+    <div class="schedule__opponent">
+      <%= "対戦相手： #{@schedule.opponent}" %>
+    </div>
+    <div class="schedule__start_time">
+      <%= "試合開始： #{l @schedule.start_time, format: :short}" %>
+    </div>
+    <div class="schedule__location">
+      <%= "試合会場： #{@schedule.location}" %>
+    </div>
+    <div class="schedule__meeting_time">
+      <%= "集合時刻： #{l @schedule.meeting_time, format: :short}" %>
+    </div>
+    <div class="schedule__deadline">
+        <%= "参加可否の回答期限： #{@schedule.deadline}" %>
+    </div>
+    <div class="schedule__user">
+        <%= "最終更新者： #{@schedule.user.name_kanji}" %>
+    </div>
+
+
+    <% if current_user == @schedule.user %>
+    <div class="schedule__manage">
+      <%= link_to "編集", edit_schedule_path(@schedule), class: :schedule__btn %>
+      <%= link_to "削除", schedule_path(@schedule), data: { turbo_method: :delete }, class: :schedule__btn %>
+    </div>
+    <% end %>
+
+
       <div class="schedule__comments">
-        <% if user_signed_in? %>
+        <%# <% if user_signed_in? %>
           <%= form_with model: [@schedule, @comment], local: true do |f|%>
             <div class="field">
               <%= f.label :content, "コメント" %><br />
@@ -39,16 +53,22 @@
               <%= f.submit "送信する", class: :form__btn  %>
             </div>
           <% end %>
-        <% end %>
+        <%# <% end %>
+
+
         <ul class="comments_lists">
           <% @comments.each do |comment| %>
             <li class="comments_list">
-              <%= comment.content%>
-              <%= link_to "（#{comment.user.name_kanji}）", user_path(comment.user), class: :comment_user %>
               <%= l comment.created_at %>
+              <%= "[#{comment.user.name_kanji}]" %>
             </li>
+            <div class="comment">
+              <%= comment.content %>
+            </div>
           <% end %>
         </ul>
+
+
       </div>
     </div>
   </div>

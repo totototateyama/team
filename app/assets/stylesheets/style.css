@@ -183,12 +183,38 @@ a {
 
 /* 詳細ページ */
 .schedule__wrapper{
-  min-height: calc(100vh - 161px);
+  /* min-height: calc(100vh - 161px); */
 }
-.schedule__hedding{
+.schedule__status{
   font-size: 24px;
   font-weight: bold;
   text-align: center;
+}
+.schedule__match {
+  margin-bottom: 5px;
+  font-size: 18px;
+  display: flex;
+}
+.schedule__opponent {
+  margin-bottom: 5px;
+  font-size: 18px;
+}
+.schedule__start_time {
+  margin-bottom: 5px;
+  font-size: 18px;
+}
+.schedule__location {
+  margin-bottom: 5px;
+  font-size: 18px;
+}
+.schedule__meeting_time {
+  margin-bottom: 5px;
+  font-size: 18px;
+}
+.schedule__deadline {
+  margin-bottom: 5px;
+  font-size: 18px;
+  display: flex;
 }
 .schedule__user{
   display: block;
@@ -197,21 +223,8 @@ a {
   text-align: center;
   text-decoration: underline;
 }
-.schedule__image{
-  width: 40%;
-  margin: 0 auto;
-  padding: 16px 0;
-}
-.schedule__detail{
-  display: flex;
-  align-items: center;
-  flex-direction: column;
-  margin-bottom: 8px;
-}
-.detail__title{
-  font-size: 20px;
-  font-weight: bold;
-}
+
+
 .schedule__manage{
   display: flex;
   justify-content: center;
@@ -219,8 +232,8 @@ a {
 }
 .schedule__btn{
   display: block;
-  padding: 0.4em 1.6em;
-  font-size: 0.4em;
+  padding: 0.2em 1.0em;
+  font-size: 1.0em;
   color: #999;
   text-decoration: none;
   user-select: none;
@@ -234,6 +247,18 @@ a {
   background: #999;
 }
 
+
+/* .schedule__detail{
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  margin-bottom: 8px;
+}
+.detail__title{
+  font-size: 20px;
+  font-weight: bold;
+} */
+
 .schedule__comments{
   background-color: #f6f6f6;
   padding: 20px;
@@ -241,7 +266,9 @@ a {
 }
 
 .comments_lists{
+  font-size: 14px;
   padding-left: 20px;
+  display: flex;
 }
 
 .comments_list{
@@ -249,11 +276,14 @@ a {
   padding-bottom: 5px;
 }
 
-.comment_user{
-  font-size: 16px;
-  color: #999;
-  text-decoration: underline;
+.comment{
+  font-size: 18px;
+  /* color: #999; */
+  /* text-decoration: underline; */
+  padding-left: 20px;
 }
+
+
 
 /* ユーザーページ */
 .user__wrapper{
