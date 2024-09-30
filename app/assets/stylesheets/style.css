@@ -33,14 +33,12 @@ a {
 
 
 
-
-
 /* ヘッダー */
 
 .header {
   background-color: #b6fdb4;
-  margin-bottom: 40px;
-  padding: 20px 0;
+  margin-bottom: 20px;
+  padding: 10px 0;
 }
 .inner {
   width: 1024px;
@@ -95,22 +93,60 @@ a {
 
 
 /* フォーム周り */
+
 .form__wrapper{
   min-height: calc(100vh - 161px);
 }
-
+.field__status_id{
+  margin: 15px 0;
+  font-size: 16px;
+}
+.match_day{
+  margin: 0 0 3px;
+  font-size: 16px;
+}
+.field__match_day{
+  margin: 0 0 15px;
+  font-size: 16px;
+  display: flex;
+  height: 20px;
+}
+.field__match_week{
+  margin: 15px 0;
+  font-size: 16px;
+}
+.field__opponent{
+  margin: 15px 0;
+  font-size: 16px;
+}
+.field__location{
+  margin: 15px 0;
+  font-size: 16px;
+}
 .form__text {
-  width: 20%;
+  width: 40%;
 }
-
-.field{
-  margin: 10px 0;
+.field__start_time{
+  margin: 15px 0;
+  font-size: 16px;
 }
-
+.field__meeting_time{
+  margin: 15px 0;
+  font-size: 16px;
+}
+.deadline{
+  margin: 0 0 3px;
+  font-size: 16px;
+}
+.field__deadline{
+  margin: 0 0 15px;
+  font-size: 16px;
+  display: flex;
+  height: 20px;
+}
 .actions{
-  margin-bottom: 40px;
+  margin-bottom: 60px;
 }
-
 .form__btn{
   display: inline-block;
   padding: 0.4em 1.6em;
@@ -120,15 +156,17 @@ a {
   user-select: none;
   background: #87CEFA;
   border: 1px #87CEFA solid;
-  border-radius: 3px;
+  border-radius: 10px;
   box-shadow: 0 3px 3px 0 rgba(0, 0, 0, 0.14), 0 1px 2px 0 rgba(0, 0, 0, 0.12);
   transition: 0.2s ease;
 }
-
 .form__btn:hover {
   box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.2), 0 1px 8px 0 rgba(0, 0, 0, 0.12);
   cursor: pointer;
 }
+
+
+
 
 /* メイン */
 
@@ -137,20 +175,22 @@ a {
   margin-bottom: 28px;
 }
 .card__wrapper {
-  /* display: flex; */
   flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
   min-height: calc(100vh - 161px);
-  border: 1px #87CEFA solid;
 }
 
 
-/* スケジュール※一応完成！ */
+
+
+/* スケジュール */
+
 .card {
   margin-bottom: 40px;
   width: 100%;
-  border: 1px #87CEFA solid;
+  border: 3px #10ef17 solid;
+  border-radius: 20px;
 }
 .card__status {
   margin-bottom: 5px;
@@ -185,7 +225,9 @@ a {
 }
 
 
-/* 詳細ページ※一応完成！ */
+
+
+/* 詳細ページ */
 
 .schedule__heading{
   display: flex;
@@ -194,21 +236,16 @@ a {
   font-size: 30px;
   font-weight: bold;
 }
-
 .schedule__wrapper{
   display: flex;
   justify-content: space-between;
-  /* min-height: calc(100vh - 161px); */
-  border: 1px #87CEFA solid;
+   border: 1px #87CEFA solid;
 }
-
-
 .schedule__status{
   margin-bottom: 10px;
   font-size: 30px;
   font-weight: bold;
   text-decoration: underline;
-  /* text-align: center; */
 }
 .schedule__user{
   display: flex;
@@ -237,8 +274,6 @@ a {
   color: #fff;
   background: #999;
 }
-
-
 .schedule__match {
   margin-bottom: 10px;
   font-size: 18px;
@@ -272,11 +307,9 @@ a {
   font-weight: bold;
   color: #ff0000;
 }
-
-
 .schedule__comments{
-  background-color: #f6f6f6;
-  padding: 20px;
+  background-color: #c7f6c7;
+  padding: 10px;
   margin: 28px 0 40px 0;
 }
 .comments_lists{
@@ -292,10 +325,15 @@ a {
   font-size: 18px;
   padding-left: 20px;
 }
+.field{
+  margin: 10px 0;
+}
+
 
 
 
 /* ユーザーページ */
+
 .user__wrapper{
   min-height: calc(100vh - 161px);
 }
@@ -326,6 +364,10 @@ a {
   justify-content: space-between;
   align-items: center;
 }
+
+
+
+
 /* フッター */
 
 .footer {
@@ -338,7 +380,11 @@ a {
   font-size: 10px;
 }
 
+
+
+
 /* タブレット対応 */
+
 @media (max-width: 1024px) {
   .inner {
     width: 90%;
@@ -349,14 +395,18 @@ a {
   }
   .card {
     width: 100%;
-    margin-bottom: 40px;
+    margin-bottom: 20px;
   }
   .schedule_image{
     width: 60%;
   }
 }
 
+
+
+
  /* スマホ表示 */
+
 @media (max-width: 599px) {
   .logo {
     width: 120px;
@@ -366,7 +416,7 @@ a {
   }
   .card {
     width: 90%;
-    margin-bottom: 60px;
+    margin-bottom: 40px;
   }
   .card__title {
     font-size: 18px;

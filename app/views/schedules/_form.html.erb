@@ -1,68 +1,68 @@
 <%= form_with model: schedule, local: true do |f|%>
 
-  <div class="field">
-    <%= f.label :status_id, "未確定  or  確定" %><br />
-    <%= f.collection_select(:status_id, Status.all, :id, :name, {}, {class:"form__text"}) %>
-  </div>
+    <div class="field__status_id">
+      <p>未確定　or　確定</P>
+      <%= f.collection_select(:status_id, Status.all, :id, :name, {}, {}) %>
+    </div>
 
-  <div class='field'>
-    <%= f.label :match_day, "試合日" %><br />
-    <%= raw sprintf(
-        f.date_select(
-          :match_day,
-          class:'select-birth',
-          id:"birth-date",
-          use_month_numbers: true,
-          prompt:'--',
-          start_year: (Time.now.year + 0),
-          end_year: (Time.now.year + 1),
-          date_separator: '%s'),
-        "<p> 年 </p>", "<p> 月 </p>") + "<p> 日 </p>" %>
-  </div>
+    <div class="match_day">
+      対戦日
+    </div>
+    <div class="field__match_day">
+      <%= raw sprintf(
+          f.date_select(
+            :match_day,
+            use_month_numbers: true,
+            prompt:'--',
+            start_year: (Time.now.year + 0),
+            end_year: (Time.now.year + 1),
+            date_separator: '%s'),
+          "<p> 年　 </p>", "<p> 月　 </p>") + "<p> 日 </p>" %>
+    </div>
 
-  <div class="field">
-      <%= f.label :match_week_id, "曜日" %><br />
-      <%= f.collection_select(:match_week_id, MatchWeek.all, :id, :name, {}, {class:"form__text"}) %>
-  </div>
+    <div class="field__match_week">
+      <p>曜日</P>
+      <%= f.collection_select(:match_week_id, MatchWeek.all, :id, :name, {}, {}) %>
+    </div>
 
-  <div class="field">
-    <%= f.label :opponent, "対戦相手" %><br />
-    <%= f.text_field :opponent %>
-  </div>
+    <div class="field__opponent">
+      <p>対戦相手</P>
+      <%= f.text_field :opponent %>
+    </div>
 
-  <div class="field">
-    <%= f.label :location, "試合会場" %><br />
-    <%= f.text_area :location, class: :form__text %>
-  </div>
+    <div class="field__location">
+      <p>試合会場</P>
+      <%= f.text_area :location, class: :form__text %>
+    </div>
 
-  <div class="field">
-    <%= f.label :start_time, "試合開始時刻" %><br />
-    <%= f.time_select :start_time, 
-    {include_blank: true, include_seconds: false, start_hour: 6, end_hour: 16, minute_step: 10}, 
-    {class: 'time-box'} %>
-  </div>
+    <div class="field__start_time">
+      <p>試合開始時刻</P>
+      <%= f.time_select :start_time, 
+      {prompt:'--', include_seconds: false, start_hour: 6, end_hour: 16, minute_step: 10}, {} %>
+    </div>
 
-  <div class="field">
-    <%= f.label :meeting_time, "集合時刻" %><br />
-    <%= f.time_select :meeting_time, 
-    {include_blank: true, include_seconds: false, start_hour: 6, end_hour: 16, minute_step: 10}, 
-    {class: 'time-box'} %>
-  </div>
+    <div class="field__meeting_time">
+      <p>集合時刻</P>
+      <%= f.time_select :meeting_time, 
+      {prompt:'--', include_seconds: false, start_hour: 6, end_hour: 16, minute_step: 10}, {} %>
+    </div>
 
-  <div class='field'>
-    <%= f.label :deadline, "回答締切日" %><br />
-    <%= raw sprintf(
-        f.date_select(
-          :deadline,
-          class:'select-birth',
-          id:"birth-date",
-          use_month_numbers: true,
-          prompt:'--',
-          start_year: (Time.now.year + 0),
-          end_year: (Time.now.year + 1),
-          date_separator: '%s'),
-        "<p> 年 </p>", "<p> 月 </p>") + "<p> 日 </p>" %>
-  </div>
+
+    <div class="deadline">
+      回答締切日
+    </div>
+    <div class="field__deadline">
+      <%= raw sprintf(
+          f.date_select(
+            :deadline,
+            use_month_numbers: true,
+            prompt:'--',
+            start_year: (Time.now.year + 0),
+            end_year: (Time.now.year + 1),
+            date_separator: '%s'),
+          "<p> 年　 </p>", "<p> 月　 </p>") + "<p> 日 </p>" %>
+    </div>
+
 
   <div class="actions">
     <%= f.submit "保存する", class: :form__btn  %>
