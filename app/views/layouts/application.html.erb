@@ -21,7 +21,7 @@
           <% if user_signed_in? %>
             <div class="nav__right">
               <%= link_to "ログアウト", destroy_user_session_path, data: { turbo_method: :delete }, class: :nav__logout %>
-              <%= link_to "New Proto", new_schedule_path, class: :nav__btn %>
+              <%= link_to "スケジュール投稿", new_schedule_path, class: :nav__btn %>
             </div>
           <% else %>
             <div class="nav__right">
@@ -33,8 +33,9 @@
       </div>
         <div class="greeting">
           <% if user_signed_in? %>
-            ♦ ようこそ～
-            <%= link_to "#{current_user.name_kanji}さん ♪ ♦", user_path(current_user), class: :greeting__link%>
+          <div class="greeting__link">
+            <%= "☆ ようこそ、#{current_user.name_kanji}さん ☆" %>
+          </div>
           <% end %>
         </div>
     </header>

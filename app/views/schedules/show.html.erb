@@ -1,9 +1,19 @@
 <main class="main">
   <div class="inner">
+    <div class="schedule__heading">スケジュールの詳細</div>
     <div class="schedule__wrapper">
       <p class="schedule__status">
         <%= "【#{@schedule.status.name}】" %>
       </p>
+      <div class="schedule__user">
+        <%= "最終更新者： #{@schedule.user.name_kanji}" %>
+      </div>
+      <% if current_user == @schedule.user %>
+      <div class="schedule__manage">
+        <%= link_to "編集", edit_schedule_path(@schedule), class: :schedule__btn %>
+        <%= link_to "削除", schedule_path(@schedule), data: { turbo_method: :delete }, class: :schedule__btn %>
+      </div>
+      <% end %>
     </div>
 
     <div class="schedule__match">
@@ -29,17 +39,6 @@
     <div class="schedule__deadline">
         <%= "参加可否の回答期限： #{@schedule.deadline}" %>
     </div>
-    <div class="schedule__user">
-        <%= "最終更新者： #{@schedule.user.name_kanji}" %>
-    </div>
-
-
-    <% if current_user == @schedule.user %>
-    <div class="schedule__manage">
-      <%= link_to "編集", edit_schedule_path(@schedule), class: :schedule__btn %>
-      <%= link_to "削除", schedule_path(@schedule), data: { turbo_method: :delete }, class: :schedule__btn %>
-    </div>
-    <% end %>
 
 
       <div class="schedule__comments">

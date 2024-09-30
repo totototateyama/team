@@ -1,8 +1,8 @@
 /* リセットCSS */
+
 * {
   box-sizing: border-box;
 }
-
 html,
 body,
 ul,
@@ -14,33 +14,33 @@ div {
   margin: 0;
   padding: 0;
 }
-
 body {
   font-family: "Noto Sans JP", "Hiragino Kaku Gothic ProN W3", sans-serif;
   color: #3b4043;
 }
-
 li {
   list-style: none;
 }
-
 img {
   max-width: 100%;
   vertical-align: bottom;
 }
-
 a {
   text-decoration: none;
   color: #3b4043;
 }
 
+
+
+
+
+
 /* ヘッダー */
 
 .header {
-  background-color: #f1f8fe;
-  margin-bottom: 48px;
+  background-color: #b6fdb4;
+  margin-bottom: 40px;
   padding: 20px 0;
-
 }
 .inner {
   width: 1024px;
@@ -50,7 +50,6 @@ a {
   width: 100%;
   display: flex;
   justify-content: space-between;
-  
 }
 .logo {
   width: 600px;
@@ -58,7 +57,7 @@ a {
 .nav__btn{
   display: inline-block;
   padding: 0.4em 1.6em;
-  font-size: 0.8em;
+  font-size: 1.0em;
   color: #87CEFA;
   text-decoration: none;
   user-select: none;
@@ -70,11 +69,10 @@ a {
   color: #fff;
   background: #87CEFA;
 }
-
 .nav__logout{
   display: inline-block;
   padding: 0.4em 1.6em;
-  font-size: 0.8em;
+  font-size: 1.0em;
   color: #87CEFA;
   text-decoration: none;
   user-select: none;
@@ -83,18 +81,18 @@ a {
   transition: 0.4s ease;
 }
 .nav__logout:hover{
-  opacity: 0.5;
+  color: #fff;
+  background: #87CEFA;
 }
-
 .greeting{
-  margin-bottom: 20px;
+  margin: 5px;
   font-size: 1.8em;
   text-align: center;
+  font-weight: bold;
 }
-.greeting__link{
-  text-decoration: underline;
-  text-decoration: none;
-}
+
+
+
 
 /* フォーム周り */
 .form__wrapper{
@@ -102,7 +100,7 @@ a {
 }
 
 .form__text {
-  width: 50%;
+  width: 20%;
 }
 
 .field{
@@ -147,6 +145,7 @@ a {
   border: 1px #87CEFA solid;
 }
 
+
 /* スケジュール※一応完成！ */
 .card {
   margin-bottom: 40px;
@@ -155,24 +154,29 @@ a {
 }
 .card__status {
   margin-bottom: 5px;
+  padding-left: 10px;
   font-size: 22px;
   font-weight: bold;
 }
 .card__match {
   margin-bottom: 5px;
+  padding-left: 10px;
   font-size: 18px;
   display: flex;
 }
 .card__opponent {
   margin-bottom: 5px;
+  padding-left: 10px;
   font-size: 18px;
 }
 .card__start_time {
-  margin-bottom: 5px;
+  margin-bottom: 0px;
+  padding-left: 10px;
   font-size: 18px;
 }
 .card__user_name_kanji {
   margin-bottom: 2px;
+  padding-right: 10px;
   font-size: 12px;
   display: block;
   color: #999;
@@ -181,54 +185,41 @@ a {
 }
 
 
-/* 詳細ページ */
-.schedule__wrapper{
-  /* min-height: calc(100vh - 161px); */
-}
-.schedule__status{
-  font-size: 24px;
+/* 詳細ページ※一応完成！ */
+
+.schedule__heading{
+  display: flex;
+  justify-content: center;
+  margin-bottom: 10px;
+  font-size: 30px;
   font-weight: bold;
-  text-align: center;
 }
-.schedule__match {
-  margin-bottom: 5px;
-  font-size: 18px;
+
+.schedule__wrapper{
   display: flex;
+  justify-content: space-between;
+  /* min-height: calc(100vh - 161px); */
+  border: 1px #87CEFA solid;
 }
-.schedule__opponent {
-  margin-bottom: 5px;
-  font-size: 18px;
-}
-.schedule__start_time {
-  margin-bottom: 5px;
-  font-size: 18px;
-}
-.schedule__location {
-  margin-bottom: 5px;
-  font-size: 18px;
-}
-.schedule__meeting_time {
-  margin-bottom: 5px;
-  font-size: 18px;
-}
-.schedule__deadline {
-  margin-bottom: 5px;
-  font-size: 18px;
-  display: flex;
+
+
+.schedule__status{
+  margin-bottom: 10px;
+  font-size: 30px;
+  font-weight: bold;
+  text-decoration: underline;
+  /* text-align: center; */
 }
 .schedule__user{
-  display: block;
+  display: flex;
   font-size: 16px;
-  color: #999;
-  text-align: center;
+  align-items: center;
   text-decoration: underline;
 }
-
-
 .schedule__manage{
   display: flex;
   justify-content: center;
-  padding-top: 16px;
+  align-items: center;
 }
 .schedule__btn{
   display: block;
@@ -240,7 +231,7 @@ a {
   border: 1px #999 solid;
   border-radius: 3px;
   transition: 0.4s ease;
-  margin: 0 4px;
+  margin: 0 6px;
 }
 .schedule__btn:hover{
   color: #fff;
@@ -248,38 +239,57 @@ a {
 }
 
 
-/* .schedule__detail{
+.schedule__match {
+  margin-bottom: 10px;
+  font-size: 18px;
+  text-decoration: underline;
   display: flex;
-  align-items: center;
-  flex-direction: column;
-  margin-bottom: 8px;
 }
-.detail__title{
-  font-size: 20px;
+.schedule__opponent {
+  margin-bottom: 10px;
+  font-size: 18px;
+  text-decoration: underline;
+}
+.schedule__start_time {
+  margin-bottom: 10px;
+  font-size: 18px;
+  text-decoration: underline;
+}
+.schedule__location {
+  margin-bottom: 10px;
+  font-size: 18px;
+  text-decoration: underline;
+}
+.schedule__meeting_time {
+  margin-bottom: 10px;
+  font-size: 18px;
+  text-decoration: underline;
+}
+.schedule__deadline {
+  margin-bottom: 10px;
+  font-size: 18px;
+  text-decoration: underline;
   font-weight: bold;
-} */
+  color: #ff0000;
+}
+
 
 .schedule__comments{
   background-color: #f6f6f6;
   padding: 20px;
   margin: 28px 0 40px 0;
 }
-
 .comments_lists{
   font-size: 14px;
   padding-left: 20px;
   display: flex;
 }
-
 .comments_list{
   list-style-type: square;
   padding-bottom: 5px;
 }
-
 .comment{
   font-size: 18px;
-  /* color: #999; */
-  /* text-decoration: underline; */
   padding-left: 20px;
 }
 
