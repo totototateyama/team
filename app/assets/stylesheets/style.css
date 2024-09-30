@@ -239,7 +239,6 @@ a {
 .schedule__wrapper{
   display: flex;
   justify-content: space-between;
-   border: 1px #87CEFA solid;
 }
 .schedule__status{
   margin-bottom: 10px;
