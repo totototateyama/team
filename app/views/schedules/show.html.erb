@@ -18,13 +18,13 @@
         <div class="schedule__detail">
           <p class="detail__title">キャッチコピー</p>
           <p class="detail__message">
-            <%= @schedule.start_time %>
+            <%= l @schedule.start_time, format: :short %>
           </p>
         </div>
         <div class="schedule__detail">
           <p class="detail__title">コンセプト</p>
           <p class="detail__message">
-            <%= @schedule.meeting_time %>
+            <%= l @schedule.meeting_time, format: :short %>
           </p>
         </div>
       </div>
@@ -45,6 +45,7 @@
             <li class="comments_list">
               <%= comment.content%>
               <%= link_to "（#{comment.user.name_kanji}）", user_path(comment.user), class: :comment_user %>
+              <%= l comment.created_at %>
             </li>
           <% end %>
         </ul>
