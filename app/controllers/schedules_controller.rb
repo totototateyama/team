@@ -4,7 +4,7 @@ class SchedulesController < ApplicationController
   before_action :contributor_confirmation, only: [:edit, :update, :destroy]
 
   def index
-    @schedules = Schedule.includes(:user)
+    @schedules = Schedule.includes(:user).where('match_day >= ?', Date.today)
   end
 
   def new
