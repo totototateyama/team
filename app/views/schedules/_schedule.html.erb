@@ -22,5 +22,6 @@
 
     <div class="card__user_name_kanji">
       <%= link_to "最終更新者： #{schedule.user.name_kanji}", schedule_path(schedule) %>
+      <%= link_to " (#{l schedule.updated_at, format: :default})", schedule_path(schedule) %>
     </div>
 </div>

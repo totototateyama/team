@@ -9,6 +9,7 @@
       </p>
       <div class="schedule__user">
         <%= "最終更新者： #{@schedule.user.name_kanji}" %>
+        <%= " (#{l @schedule.updated_at, format: :default})" %>
       </div>
       <% if current_user == @schedule.user %>
       <div class="schedule__manage">
