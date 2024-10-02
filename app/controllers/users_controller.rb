@@ -1,7 +1,11 @@
 class UsersController < ApplicationController
 
+
+  def index
+    @users = Schedule.includes(:user).where('match_day <= ?', Date.today - 1)
+  end
+
   def show
-    @user = User.find(params[:id])
   end
 
 end
