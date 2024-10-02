@@ -5,5 +5,5 @@ Rails.application.routes.draw do
   resources :schedules, only: [:new, :create, :show, :edit, :update, :destroy] do
     resources :comments, only: :create 
   end
-  resources :users, only: :show
+  resources :users, only: [:index, :show]
 end
