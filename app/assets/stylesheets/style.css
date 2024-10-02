@@ -53,10 +53,14 @@ a {
   width: 600px;
 }
 .nav__btn{
-  display: inline-block;
-  padding: 0.4em 1.6em;
+  display: block;
+  width: 180px;
+  /* height:20px; */
+  margin-bottom: 8px;
+  padding: 0.2em 1.6em;
   font-size: 1.0em;
-  color: #87CEFA;
+  color: #000000;
+  background: #d9ff00;
   text-decoration: none;
   user-select: none;
   border: 1px #87CEFA solid;
@@ -67,7 +71,7 @@ a {
   color: #fff;
   background: #87CEFA;
 }
-.nav__logout{
+/* .nav__logout{
   display: inline-block;
   padding: 0.4em 1.6em;
   font-size: 1.0em;
@@ -77,18 +81,24 @@ a {
   border: 1px #87CEFA solid;
   border-radius: 3px;
   transition: 0.4s ease;
-}
-.nav__logout:hover{
+} */
+/* .nav__logout:hover{
   color: #fff;
   background: #87CEFA;
-}
+} */
 .greeting{
+  display: flex;
   margin: 5px;
-  font-size: 1.8em;
+  font-size: 1.6em;
   text-align: center;
   font-weight: bold;
+  justify-content: center;
 }
-
+.greeting__today{
+  margin: 10px 0 0 20px;
+  font-size: 16px;
+  text-align: center;
+}
 
 
 
@@ -190,7 +200,7 @@ a {
 
 
 .card {
-  margin-bottom: 40px;
+  margin-bottom: 20px;
   width: 100%;
   border: 3px #10ef17 solid;
   border-radius: 20px;
@@ -323,7 +333,7 @@ a {
   padding-bottom: 5px;
 }
 .comment{
-  font-size: 18px;
+  font-size: 16px;
   padding-left: 20px;
 }
 .field{
@@ -369,7 +379,7 @@ td {
 }
 
 tbody tr:nth-child(even) {
-  background-color: #cae2fb;       /* 偶数行の背景色 */
+  background-color: #cae2fb;  /* 偶数行の背景色 */
 } 
 
 
