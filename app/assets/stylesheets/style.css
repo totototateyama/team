@@ -64,7 +64,7 @@ a {
   text-decoration: none;
   user-select: none;
   border: 1px #87CEFA solid;
-  border-radius: 3px;
+  border-radius: 20px;
   transition: 0.4s ease;
 }
 .nav__btn:hover{

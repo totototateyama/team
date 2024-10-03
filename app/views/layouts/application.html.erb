@@ -20,10 +20,11 @@
           </div>
           <% if user_signed_in? %>
             <div class="nav__right">
-              <%= link_to "ログアウト", destroy_user_session_path, data: { turbo_method: :delete }, class: :nav__btn %>
+              <%= link_to "ホーム", root_path, class: :nav__btn %>
               <%= link_to "スケジュール投稿", new_schedule_path, class: :nav__btn %>
               <%= link_to "選手紹介", user_path(:id), class: :nav__btn %>
               <%= link_to "過去の対戦", users_path, class: :nav__btn %>
+              <%= link_to "ログアウト", destroy_user_session_path, data: { turbo_method: :delete }, class: :nav__btn %>
             </div>
           <% else %>
             <div class="nav__right">
