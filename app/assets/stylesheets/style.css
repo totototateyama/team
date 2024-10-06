@@ -325,16 +325,19 @@ a {
 }
 .comments_lists{
   font-size: 14px;
-  padding-left: 20px;
-  display: flex;
+  padding-left: 15px;
+}
+.comment__all{
+  display: flex
 }
 .comments_list{
+  font-size: 14px;
   list-style-type: square;
   padding-bottom: 5px;
 }
 .comment{
   font-size: 16px;
-  padding-left: 20px;
+  /* padding-left: 20px; */
 }
 .field{
   margin: 10px 0;

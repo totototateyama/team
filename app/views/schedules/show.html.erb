@@ -60,6 +60,7 @@
 
         <ul class="comments_lists">
           <% @comments.each do |comment| %>
+          <div class="comment__all">
             <li class="comments_list">
               <%= l comment.created_at %>
               <%= "[#{comment.user.name_kanji}]" %>
@@ -67,6 +68,7 @@
             <div class="comment">
               <%= comment.content %>
             </div>
+          </div>
           <% end %>
         </ul>
 
