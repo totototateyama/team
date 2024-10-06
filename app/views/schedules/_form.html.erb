@@ -38,13 +38,13 @@
     <div class="field__start_time">
       <p>試合開始時刻</P>
       <%= f.time_select :start_time, 
-      {prompt: '--', start_hour: 6, end_hour: 16, minute_step: 10,}, {} %>
+      {prompt: '--', include_seconds: false, start_hour: 6, end_hour: 16, minute_step: 10,}, {} %>
     </div>
 
     <div class="field__meeting_time">
       <p>集合時刻</P>
       <%= f.time_select :meeting_time, 
-      {prompt: '--', start_hour: 6, end_hour: 16, minute_step: 10,}, {} %>
+      {prompt: '--', include_seconds: false, start_hour: 6, end_hour: 16, minute_step: 10,}, {} %>
     </div>
 
 
