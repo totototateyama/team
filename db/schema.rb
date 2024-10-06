@@ -27,8 +27,8 @@ ActiveRecord::Schema[7.0].define(version: 2024_09_26_313217) do
     t.integer "match_week_id", null: false
     t.string "opponent", null: false
     t.string "location", null: false
-    t.time "start_time", null: false
-    t.time "meeting_time", null: false
+    t.datetime "start_time", null: false
+    t.datetime "meeting_time", null: false
     t.date "deadline", null: false
     t.bigint "user_id", null: false
     t.datetime "created_at", null: false
