@@ -17,7 +17,7 @@
     </div>
 
     <div class="card__start_time">
-      <%= link_to "試合開始： #{l schedule.start_time, format: :short}", schedule_path(schedule) %>
+      <%= link_to "試合開始： #{l schedule.start_time - 9.hours, format: :short}", schedule_path(schedule) %>
     </div>
 
     <div class="card__user_name_kanji">
