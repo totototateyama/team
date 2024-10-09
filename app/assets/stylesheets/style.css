@@ -71,21 +71,6 @@ a {
   color: #fff;
   background: #87CEFA;
 }
-/* .nav__logout{
-  display: inline-block;
-  padding: 0.4em 1.6em;
-  font-size: 1.0em;
-  color: #87CEFA;
-  text-decoration: none;
-  user-select: none;
-  border: 1px #87CEFA solid;
-  border-radius: 3px;
-  transition: 0.4s ease;
-} */
-/* .nav__logout:hover{
-  color: #fff;
-  background: #87CEFA;
-} */
 .greeting{
   display: flex;
   margin: 5px;
@@ -384,14 +369,6 @@ td {
 tbody tr:nth-child(even) {
   background-color: #cae2fb;  /* 偶数行の背景色 */
 } 
-
-
-/* .user__card {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  align-items: center;
-} */
 
 
 

@@ -2,7 +2,74 @@
   <div class="inner">
     <div class="form__wrapper">
       <h2 class="page-heading">スケジュール編集</h2>
-      <%= render partial: "form", locals: { schedule: @schedule } %>
+      <%= form_with model: @schedule, local: true do |f|%>
+
+    <div class="field__status_id">
+      <p>未確定　or　確定</P>
+      <%= f.collection_select(:status_id, Status.all, :id, :name, {}, {}) %>
+    </div>
+
+    <div class="match_day">
+      対戦日
+    </div>
+    <div class="field__match_day">
+      <%= raw sprintf(
+          f.date_select(
+            :match_day,
+            use_month_numbers: true,
+            prompt:'--',
+            start_year: (Time.now.year + 0),
+            end_year: (Time.now.year + 1),
+            date_separator: '%s'),
+          "<p> 年　 </p>", "<p> 月　 </p>") + "<p> 日 </p>" %>
+    </div>
+
+    <div class="field__match_week">
+      <p>曜日</P>
+      <%= f.collection_select(:match_week_id, MatchWeek.all, :id, :name, {}, {}) %>
+    </div>
+
+    <div class="field__opponent">
+      <p>対戦相手</P>
+      <%= f.text_field :opponent %>
+    </div>
+
+    <div class="field__location">
+      <p>試合会場</P>
+      <%= f.text_area :location, class: :form__text %>
+    </div>
+
+    <div class="field__start_time">
+      <p>試合開始時刻</P>
+      <%= f.time_select :start_time, 
+      {default: @schedule.start_time + 9.hour, prompt: '--', include_seconds: false, minute_step: 10,}, {} %>
+    </div>
+
+    <div class="field__meeting_time">
+      <p>集合時刻</P>
+      <%= f.time_select :meeting_time, 
+      {default: @schedule.meeting_time, prompt: '--', include_seconds: false,  minute_step: 10,}, {} %>
+    </div>
+
+    <div class="deadline">
+      回答締切日
+    </div>
+    <div class="field__deadline">
+      <%= raw sprintf(
+          f.date_select(
+            :deadline,
+            use_month_numbers: true,
+            prompt:'--',
+            start_year: (Time.now.year + 0),
+            end_year: (Time.now.year + 1),
+            date_separator: '%s'),
+          "<p> 年　 </p>", "<p> 月　 </p>") + "<p> 日 </p>" %>
+    </div>
+
+  <div class="actions">
+    <%= f.submit "保存する", class: :form__btn  %>
+  </div>
+<% end %>
     </div>
   </div>
 </div>
