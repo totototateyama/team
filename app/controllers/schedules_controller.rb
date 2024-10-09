@@ -66,16 +66,29 @@ class SchedulesController < ApplicationController
     match_day_year = params[:schedule]["match_day(1i)"].to_i
     match_day_month = params[:schedule]["match_day(2i)"].to_i
     match_day_day = params[:schedule]["match_day(3i)"].to_i
+    match_date = Date.new(match_day_year, match_day_month, match_day_day)
 
     # start_timeとmeeting_timeの各部分を取得
     start_hour = params[:schedule]["start_time(4i)"].to_i
     start_minute = params[:schedule]["start_time(5i)"].to_i
     meeting_hour = params[:schedule]["meeting_time(4i)"].to_i
     meeting_minute = params[:schedule]["meeting_time(5i)"].to_i
-
     start_datetime = DateTime.new(match_day_year, match_day_month, match_day_day, start_hour, start_minute)
     meeting_datetime = DateTime.new(match_day_year, match_day_month, match_day_day, meeting_hour, meeting_minute)
 
+    # deadlineの各部分を取得
+    deadline_year = params[:schedule]["deadline(1i)"].to_i
+    deadline_month = params[:schedule]["deadline(2i)"].to_i
+    deadline_day = params[:schedule]["deadline(3i)"].to_i
+    deadline_date = Date.new(deadline_year, deadline_month, deadline_day)
+
+    # @scheduleに各部分を書き込む
+    @schedule.status_id = params[:schedule]["status_id"].to_i
+    @schedule.match_day = match_date
+    @schedule.match_week_id = params[:schedule]["match_week_id"].to_i
+    @schedule.opponent = params[:schedule]["opponent"]
+    @schedule.location = params[:schedule]["location"]
+    @schedule.deadline = deadline_date
     @schedule.start_time = start_datetime
     @schedule.meeting_time = meeting_datetime
 
