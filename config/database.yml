@@ -23,6 +23,6 @@ production:
   adapter: postgresql
   url: <%= ENV['DATABASE_URL'] %>
 
-  database: team_production
-  username: team
-  password: <%= ENV["TEAM_DATABASE_PASSWORD"] %>
+  # database: team_production
+  # username: team
+  # password: <%= ENV["TEAM_DATABASE_PASSWORD"] %>
