@@ -32,7 +32,7 @@
 # 実装した機能についてのGIFおよびその説明
 
 #### １．トップページからあるスケジュールを選択して、詳細画面ページを表示した後、<br>　　編集ページを表示。
-[![Image from Gyazo](https://i.gyazo.com/ff1bc2b13a4ab5a9f8a9da6c345aa193.gif)](https://gyazo.com/ff1bc2b13a4ab5a9f8a9da6c345aa193)
+| [![Image from Gyazo](https://i.gyazo.com/ff1bc2b13a4ab5a9f8a9da6c345aa193.gif)](https://gyazo.com/ff1bc2b13a4ab5a9f8a9da6c345aa193) |
 
 ---
 
@@ -50,6 +50,20 @@
 [![Image from Gyazo](https://i.gyazo.com/cec8751b8ad4689ed426590ca98eddd3.gif)](https://gyazo.com/cec8751b8ad4689ed426590ca98eddd3)
 
 ---
+
+
+| アプリ機能1 | アプリ機能1 |
+|:-----------:|:------------:|
+| [![Image from Gyazo](https://i.gyazo.com/ff1bc2b13a4ab5a9f8a9da6c345aa193.gif)](https://gyazo.com/ff1bc2b13a4ab5a9f8a9da6c345aa193) | [![Image from Gyazo](https://i.gyazo.com/06e4af60d67cd92b9165e71f1417adfe.gif)](https://gyazo.com/06e4af60d67cd92b9165e71f1417adfe) |
+| アプリ機能の説明が入ります。アプリ機能の説明が入ります。 | アプリ機能の説明が入ります。アプリ機能の説明が入ります。 |
+
+</br>
+
+| アプリ機能3 | アプリ機能4 |
+|:-----------:|:------------:|
+| [![Image from Gyazo](https://i.gyazo.com/3f7a6199c63a0849d14fe85f576a38a9.gif)](https://gyazo.com/3f7a6199c63a0849d14fe85f576a38a9) | [![Image from Gyazo](https://i.gyazo.com/cec8751b8ad4689ed426590ca98eddd3.gif)](https://gyazo.com/cec8751b8ad4689ed426590ca98eddd3) |
+| アプリ機能の説明が入ります。アプリ機能の説明が入ります。 | アプリ機能の説明が入ります。アプリ機能の説明が入ります。 |
+
 
 # 洗い出した要件
 ###### １．プライベートな内容も含むので、BASIC認証およびログインユーザーのみアクセス可能にする。
