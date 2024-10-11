@@ -8,8 +8,8 @@
 #### https://team-mzds.onrender.com
 ---
 # テスト用アカウント
-- BASIC認証パスワード：2222
 - BASIC認証ID：admin
+- BASIC認証パスワード：2222
 - メールアドレス：10@com
 - パスワード：101010
 ---
@@ -51,7 +51,7 @@
 
 ---
 
-
+<!-- 
 | アプリ機能1 | アプリ機能1 |
 |:-----------:|:------------:|
 | [![Image from Gyazo](https://i.gyazo.com/fa5dd159dde534fbc7101ba444237d9b.gif)](https://gyazo.com/fa5dd159dde534fbc7101ba444237d9b) | [![Image from Gyazo](https://i.gyazo.com/06e4af60d67cd92b9165e71f1417adfe.gif)](https://gyazo.com/06e4af60d67cd92b9165e71f1417adfe) |
@@ -62,7 +62,7 @@
 | アプリ機能3 | アプリ機能4 |
 |:-----------:|:------------:|
 | [![Image from Gyazo](https://i.gyazo.com/3f7a6199c63a0849d14fe85f576a38a9.gif)](https://gyazo.com/3f7a6199c63a0849d14fe85f576a38a9) | [![Image from Gyazo](https://i.gyazo.com/cec8751b8ad4689ed426590ca98eddd3.gif)](https://gyazo.com/cec8751b8ad4689ed426590ca98eddd3) |
-| アプリ機能の説明が入ります。アプリ機能の説明が入ります。 | アプリ機能の説明が入ります。アプリ機能の説明が入ります。 |
+| アプリ機能の説明が入ります。アプリ機能の説明が入ります。 | アプリ機能の説明が入ります。アプリ機能の説明が入ります。 | -->
 
 
 # 洗い出した要件
