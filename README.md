@@ -33,6 +33,8 @@
 #### １．トップページからあるスケジュールを選択して、詳細画面ページを表示した後、<br>　　編集ページを表示。
 [![Image from Gyazo](https://i.gyazo.com/8dd013e13391cfdb3b5712de6cefab19.gif)](https://gyazo.com/8dd013e13391cfdb3b5712de6cefab19)
 
+---
+
 #### ２．トップページからあるスケジュールを選択して、詳細画面ページを表示した後、<br>　　コメントを閲覧。
 [![Image from Gyazo](https://i.gyazo.com/06e4af60d67cd92b9165e71f1417adfe.gif)](https://gyazo.com/06e4af60d67cd92b9165e71f1417adfe)
 
