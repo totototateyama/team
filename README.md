@@ -31,8 +31,6 @@
 ---
 # 実装した機能についてのGIFおよびその説明
 
----
-
 #### １．トップページからあるスケジュールを選択して、詳細画面ページを表示した後、<br>　　編集ページを表示。
 [![Image from Gyazo](https://i.gyazo.com/ff1bc2b13a4ab5a9f8a9da6c345aa193.gif)](https://gyazo.com/ff1bc2b13a4ab5a9f8a9da6c345aa193)
 
