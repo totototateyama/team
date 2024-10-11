@@ -32,7 +32,7 @@
 # 実装した機能についてのGIFおよびその説明
 
 #### １．トップページからあるスケジュールを選択して、詳細画面ページを表示した後、<br>　　編集ページを表示。
-| [![Image from Gyazo](https://i.gyazo.com/ff1bc2b13a4ab5a9f8a9da6c345aa193.gif)](https://gyazo.com/ff1bc2b13a4ab5a9f8a9da6c345aa193) |
+[![Image from Gyazo](https://i.gyazo.com/fa5dd159dde534fbc7101ba444237d9b.gif)](https://gyazo.com/fa5dd159dde534fbc7101ba444237d9b)
 
 ---
 
@@ -54,7 +54,7 @@
 
 | アプリ機能1 | アプリ機能1 |
 |:-----------:|:------------:|
-| [![Image from Gyazo](https://i.gyazo.com/ff1bc2b13a4ab5a9f8a9da6c345aa193.gif)](https://gyazo.com/ff1bc2b13a4ab5a9f8a9da6c345aa193) | [![Image from Gyazo](https://i.gyazo.com/06e4af60d67cd92b9165e71f1417adfe.gif)](https://gyazo.com/06e4af60d67cd92b9165e71f1417adfe) |
+| [![Image from Gyazo](https://i.gyazo.com/fa5dd159dde534fbc7101ba444237d9b.gif)](https://gyazo.com/fa5dd159dde534fbc7101ba444237d9b) | [![Image from Gyazo](https://i.gyazo.com/06e4af60d67cd92b9165e71f1417adfe.gif)](https://gyazo.com/06e4af60d67cd92b9165e71f1417adfe) |
 | アプリ機能の説明が入ります。アプリ機能の説明が入ります。 | アプリ機能の説明が入ります。アプリ機能の説明が入ります。 |
 
 </br>
